@@ -7,6 +7,7 @@ const Progress = (props) => {
         width: "100%",
         backgroundColor: "#e0e0de",
         borderRadius: 50,
+        overflow: "hidden",
     };
 
     const fillerStyles = {
