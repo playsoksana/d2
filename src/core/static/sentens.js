@@ -167,7 +167,7 @@ const sentens = [
         id: 37,
     },
     {
-        deutsch: "Ihr seit gut",
+        deutsch: "Ihr seid gut",
         UA: "Вы хорошие (множест)",
         id: 38,
     },
@@ -519,6 +519,63 @@ const sentens = [
         deutsch: "das ist meine neue Postleitzahl",
         UA: "Это мой новый почтовый индекс",
         id: 106,
+    },
+    {
+        deutsch: "das ist meine neue Postleitzahl",
+        UA: "Это мой новый почтовый индекс",
+        id: 107,
+    },
+    {
+        deutsch: "Ihr seid interessante Nachbarn",
+        UA: "Вы интересные соседи",
+        id: 108,
+    },
+    {
+        deutsch: "Ihr seid wirklich interessante Nachbarn",
+        UA: "Вы действительно интересные соседи",
+        id: 109,
+    },
+    {
+        deutsch: "Wer sind diese Leute",
+        UA: "Кто эти люди?",
+        id: 110,
+        question: true,
+    },
+    {
+        deutsch: "Wer ist das",
+        UA: "Кто это?",
+        id: 111,
+        question: true,
+    },
+    {
+        deutsch: "Was ist das",
+        UA: "Что это?",
+        id: 112,
+        question: true,
+    },
+    {
+        deutsch: "Wessen ist das",
+        UA: "Чье это?",
+        id: 113,
+        question: true,
+    },
+    {
+        deutsch: "Wann arbeitest du",
+        UA: "Когда ты работаешь?",
+        id: 114,
+        question: true,
+    },
+    {
+        deutsch: "Wo arbeitest du",
+        UA: "Где ты работаешь?",
+        id: 115,
+        question: true,
+    },
+    {
+        deutsch: "Warum machst du es",
+        UA: "Зачем ты это делаешь?",
+        id: 116,
+        question: true,
     },
 ];
 

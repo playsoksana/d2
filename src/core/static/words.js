@@ -82,6 +82,11 @@ const options = {
     lerne: ["lernt", "lernen", "lernst", "lerne"],
 
     // M
+    machen: ["machen", "mache", "macht", "machst"],
+    mache: ["machen", "mache", "macht", "machst"],
+    machs: ["machen", "mache", "macht", "machst"],
+    machst: ["machen", "mache", "macht", "machst"],
+
     meinen: ["meinen", "meine", "meint", "meinst"],
     meine: ["meinen", "meine", "meint", "meinst"],
     meint: ["meinen", "meine", "meint", "meinst"],
@@ -122,10 +127,10 @@ const options = {
     suchst: ["suchen", "suche", "sucht", "suchst"],
 
     bin: ["bist", "ist", "sind", "bin"],
-    ist: ["bist", "ist", "sind", "seit"],
-    bist: ["bist", "ist", "sind", "seit"],
-    sind: ["bist", "ist", "sind", "seit"],
-    seit: ["bist", "ist", "sind", "seit"],
+    ist: ["bist", "ist", "sind", "seid"],
+    bist: ["bist", "ist", "sind", "seid"],
+    sind: ["bist", "ist", "sind", "seid"],
+    seid: ["bist", "ist", "sind", "seid"],
 
     tun: ["tur", "tun", "rate", "ratet"],
 
@@ -224,6 +229,11 @@ const options = {
     Land: ["Stadt", "Adresse", "Strasse", "Land"],
     Postleitzahl: ["Stadt", "Adresse", "Strasse", "Postleitzahl"],
 
+    Vertraut: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
+    Nachbarn: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
+    Verwandte: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
+    Leute: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
+
     // SPORT
     Fussball: ["Fussball", "Eishockey", "Karten", "Klavier"],
     Eishockey: ["Fussball", "Eishockey", "Karten", "Klavier"],
@@ -232,6 +242,7 @@ const options = {
 
     wirklich: ["wirklich", "vielleicht", "stets", "interessant"],
     interessant: ["wirklich", "vielleicht", "stets", "interessant"],
+    interessante: ["wirklich", "vielleicht", "interessant", "interessante"],
     alles: ["wirklich", "vielleicht", "alles", "interessant"],
 
     // Adverb
@@ -247,11 +258,15 @@ const options = {
     einmal: ["noch", "einen", "einmal", "eine"],
 
     freut: ["traurig", "freut", "müde", "lustig"],
-    neue: ["neue", "neuer", "neues", "---"],
+    neue: ["neue", "neuer", "neues", "neu"],
 
+    diese: ["diese", "andere", "übrig", "neue"],
     // Questions
 
-    Woher: ["Woher", "Wo", "Wer", "Wie"],
+    Woher: ["Woher", "Wessen", "Wann", "Warum"],
+    Wessen: ["Woher", "Wessen", "Wann", "Warum"],
+    Wann: ["Woher", "Wessen", "Wann", "Warum"],
+    Warum: ["Woher", "Wessen", "Wann", "Warum"],
     Wo: ["Woher", "Wo", "Wer", "Wie"],
     Wer: ["Woher", "Wo", "Wer", "Wie"],
     Was: ["Wo", "Wer", "Was", "Wie"],
