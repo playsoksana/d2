@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 const sentens = [
     {
         deutsch: "Ich weiss es nicht",
@@ -20,7 +21,7 @@ const sentens = [
         id: 4,
     },
     {
-        deutsch: "Heute arbeitet sie",
+        deutsch: "heute arbeitet sie",
         UA: "Сегодня работает она",
         id: 5,
     },
@@ -31,7 +32,7 @@ const sentens = [
         id: 6,
     },
     {
-        deutsch: "Jetzt lernt er",
+        deutsch: "jetzt lernt er",
         UA: "Cейчас учится oн",
         id: 6,
     },
@@ -156,13 +157,13 @@ const sentens = [
         id: 35,
     },
     {
-        deutsch: "Es ist gut",
-        UA: "Оно хорошее",
+        deutsch: "Es ist schön",
+        UA: "Оно красивое",
         id: 36,
     },
     {
         deutsch: "Sie ist gut",
-        UA: "Она хорошая",
+        UA: "Она красивая",
         id: 37,
     },
     {
@@ -177,7 +178,7 @@ const sentens = [
     },
     {
         deutsch: "Er ist gut",
-        UA: "Oн хороший",
+        UA: "Oн красивый",
         id: 40,
     },
     {
@@ -229,6 +230,295 @@ const sentens = [
         deutsch: "Sie spricht Deutsch",
         UA: "Она говорит на немецком",
         id: 50,
+    },
+    {
+        deutsch: "Woher kommen Sie",
+        UA: "Вы откуда?",
+        id: 51,
+        question: true,
+    },
+    {
+        deutsch: "Woher kommst du",
+        UA: "Tы откуда?",
+        id: 52,
+        question: true,
+    },
+    {
+        deutsch: "freut mich",
+        UA: "Я рад",
+        id: 53,
+    },
+    {
+        deutsch: "Wie heissen Sie",
+        UA: "Как вас зовут?",
+        id: 54,
+        question: true,
+    },
+    {
+        deutsch: "Wie heisst du",
+        UA: "Как тебя зовут?",
+        id: 55,
+        question: true,
+    },
+    {
+        deutsch: "Wer bist du",
+        UA: "Кто ты?",
+        id: 56,
+        question: true,
+    },
+    {
+        deutsch: "Wer sind Sie",
+        UA: "Кто Вы?",
+        id: 57,
+        question: true,
+    },
+    {
+        deutsch: "Wer ist er",
+        UA: "Кто он?",
+        id: 58,
+        question: true,
+    },
+    {
+        deutsch: "Ich heisse Tor",
+        UA: "Меня зовут Тор",
+        id: 59,
+    },
+    {
+        deutsch: "Es ist sehr interessant",
+        UA: "Это очень интересно",
+        id: 60,
+    },
+    {
+        deutsch: "Es ist nicht interessant",
+        UA: "Это не интересно",
+        id: 61,
+    },
+    {
+        deutsch: "Er heisst Tor",
+        UA: "Его зовут Тор",
+        id: 62,
+    },
+    {
+        deutsch: "Ich schaue dich an",
+        UA: "Я смотрю на тебя",
+        id: 63,
+    },
+    {
+        deutsch: "Er schaut mich an",
+        UA: "Oн смотрит на меня",
+        id: 64,
+    },
+    {
+        deutsch: "Er hört mir nicht",
+        UA: "Oн не слышит меня",
+        id: 65,
+    },
+    {
+        deutsch: "wiederholen Sie noch einmal",
+        UA: "Повторите еще раз",
+        id: 66,
+    },
+    {
+        deutsch: "kreuzen Sie an",
+        UA: "Поставьте галочку",
+        id: 67,
+    },
+    {
+        deutsch: "Er ergänzt alles",
+        UA: "Он дополняет все",
+        id: 69,
+    },
+    {
+        deutsch: "Er zeigt es",
+        UA: "Oн показывает это",
+        id: 70,
+    },
+    {
+        deutsch: "Ich zeige das Buch",
+        UA: "Я показываю книгу",
+        id: 71,
+    },
+    {
+        deutsch: "Ich suche Arbeit",
+        UA: "Я ищу работу",
+        id: 72,
+    },
+    {
+        deutsch: "Ihr markiert es",
+        UA: "Вы отмечаете это  (множест)",
+        id: 73,
+    },
+    {
+        deutsch: "hören Sie und sprechen Sie nach",
+        UA: "Слушайте и повторяйте",
+        id: 74,
+    },
+    {
+        deutsch: "raten Sie",
+        UA: "Угадайте/Посоветуйте",
+        id: 75,
+    },
+    {
+        deutsch: "raten Sie das Wort",
+        UA: "Угадайте слово",
+        id: 76,
+    },
+    {
+        deutsch: "Was meinst du",
+        UA: "Что ты имеешь в виду?",
+        id: 77,
+        question: true,
+    },
+    {
+        deutsch: "Was meinen Sie",
+        UA: "Что вы имеете в виду?",
+        id: 78,
+        question: true,
+    },
+    {
+        deutsch: "Was meint er",
+        UA: "Что он имеет в виду?",
+        id: 79,
+        question: true,
+    },
+    {
+        deutsch: "Was meint ihr",
+        UA: "Что вы имеете в виду? (множест)",
+        id: 80,
+    },
+    {
+        deutsch: "Ich sage es immer",
+        UA: "Я всегда говорю это",
+        id: 81,
+    },
+    {
+        deutsch: "sagen Sie mir bitte",
+        UA: "пожалуйста, скажите мне",
+        id: 82,
+    },
+    {
+        deutsch: "Du sagst es immer",
+        UA: "Tы всегда это говоришь",
+        id: 83,
+    },
+    {
+        deutsch: "Sie vergleicht es",
+        UA: "Она сравнивает это",
+        id: 84,
+    },
+    {
+        deutsch: "Ich muss Wörter vergleichen",
+        UA: "Я должен сравнить слова",
+        id: 85,
+    },
+    {
+        deutsch: "Sie müssen Wörter vergleichen",
+        UA: "Вы должны сравнить слова",
+        id: 86,
+    },
+    {
+        deutsch: "Sie müssen Wörter vergleichen",
+        UA: "Вы должны сравнить слова",
+        id: 87,
+    },
+    {
+        deutsch: "Er muss Wörter vergleichen",
+        UA: "Он должен сравнить слова",
+        id: 88,
+    },
+    {
+        deutsch: "Sie können Wörter vergleichen",
+        UA: "Вы можете сравнить слова",
+        id: 89,
+    },
+    {
+        deutsch: "Ich kann Wörter vergleichen",
+        UA: "Я могу сравнить слова",
+        id: 90,
+    },
+    {
+        deutsch: "Er kann es nicht",
+        UA: "он не может этого сделать",
+        id: 91,
+    },
+    {
+        deutsch: "Ich kann es nicht",
+        UA: "Я не могу этого сделать",
+        id: 92,
+    },
+    {
+        deutsch: "erzählen Sie",
+        UA: "Расскажите",
+        id: 93,
+    },
+    {
+        deutsch: "Ich muss es verbinden",
+        UA: "Мне нужно это соединить",
+        id: 94,
+    },
+    {
+        deutsch: "verbinden Sie es",
+        UA: "Соедини это",
+        id: 95,
+    },
+    {
+        deutsch: "Ich kann ein bisschen",
+        UA: "Могу сделать немного",
+        id: 96,
+    },
+    {
+        deutsch: "Ich kann aber nur ein bisschen",
+        UA: "Я могу но только немного",
+        id: 97,
+    },
+    {
+        deutsch: "Ich stimme zu dir",
+        UA: "Я согласен с вами",
+        id: 98,
+    },
+    {
+        deutsch: "Er stimmt zu mir nicht",
+        UA: "Oн не согласен со мной",
+        id: 99,
+    },
+    {
+        deutsch: "Ich brauche es auch",
+        UA: "Мне тоже это нужно",
+        id: 100,
+    },
+    {
+        deutsch: "brauchst du es",
+        UA: "Тебе это нужно?",
+        id: 101,
+        question: true,
+    },
+    {
+        deutsch: "brauchst du ein Buch",
+        UA: "Тебе нужна книга?",
+        id: 102,
+        question: true,
+    },
+    {
+        deutsch: "brauchst du ein Buch",
+        UA: "Тебе нужна книга?",
+        id: 103,
+        question: true,
+    },
+    {
+        deutsch: "Wie bitte",
+        UA: "Что, простите?",
+        id: 104,
+        question: true,
+    },
+    {
+        deutsch: "das ist meine Stadt",
+        UA: "Это мой город",
+        id: 105,
+    },
+    {
+        deutsch: "das ist meine neue Postleitzahl",
+        UA: "Это мой новый почтовый индекс",
+        id: 106,
     },
 ];
 

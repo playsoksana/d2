@@ -24,19 +24,16 @@ const TaskWithSentens = (props) => {
         lang: state.lang,
     }));
 
-    console.log(
-        props.sentensSort[counter]["UA"],
-        props.sentensSort[counter].deutsch
-    );
-
     const { speak, voices } = useSpeechSynthesis();
 
     const sentensDeutsch = props.sentensSort[counter].deutsch;
-    const arrSentensDeutsch = sentensDeutsch.match(/\b(\w+)\b/g);
+    const arrSentensDeutsch = sentensDeutsch.split(" ");
     const lengthSentens = arrSentensDeutsch.length;
     const word = arrSentensDeutsch[counterWord];
     let optArr = options[`${word}`];
     const completed = Math.round((counter / props.sentensSort.length) * 100);
+
+    console.log(arrSentensDeutsch);
 
     const onChoice = (wordChoiced) => {
         setAnswer((pre) => [...pre, wordChoiced]);
@@ -46,9 +43,13 @@ const TaskWithSentens = (props) => {
     const onNext = () => {
         const isEqualArr = array.isEqual(arrSentensDeutsch, answer);
 
-        if (isEqualArr) {
-            setCounter((pre) => pre + 1);
+        if (!isEqualArr) {
+            setAnswer([]);
+            setCounterWord(0);
+            return;
         }
+
+        setCounter((pre) => pre + 1);
         setAnswer([]);
         setCounterWord(0);
 
@@ -145,7 +146,12 @@ const TaskWithSentens = (props) => {
             return null;
         }
 
-        return <div>{sentensDeutsch}</div>;
+        return (
+            <div>
+                {sentensDeutsch}
+                {props.sentensSort[counter].question ? "?" : null}
+            </div>
+        );
     };
 
     const renderButtons = () => {
@@ -189,7 +195,10 @@ const TaskWithSentens = (props) => {
 
         return (
             <div className={styles.result}>
-                <div>{list}</div>
+                <div>
+                    {list}
+                    {props.sentensSort[counter].question ? "?" : null}
+                </div>
                 {renderCorectAnswer()}
                 {buttons}
             </div>
