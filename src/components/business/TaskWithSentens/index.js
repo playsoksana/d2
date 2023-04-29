@@ -33,8 +33,6 @@ const TaskWithSentens = (props) => {
     let optArr = options[`${word}`];
     const completed = Math.round((counter / props.sentensSort.length) * 100);
 
-    console.log(arrSentensDeutsch);
-
     const onChoice = (wordChoiced) => {
         setAnswer((pre) => [...pre, wordChoiced]);
         setCounterWord((pre) => pre + 1);
@@ -91,7 +89,6 @@ const TaskWithSentens = (props) => {
     // === //
 
     const renderOptionForChoice = () => {
-        console.log(optArr);
         if (counterWord === lengthSentens || !optArr) {
             return null;
         }

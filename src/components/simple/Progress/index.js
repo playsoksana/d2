@@ -1,7 +1,6 @@
 import React from "react";
 
 const Progress = (props) => {
-    console.log(props);
     const containerStyles = {
         height: 30,
         width: "100%",
