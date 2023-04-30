@@ -30,10 +30,10 @@ const options = {
     an: ["on", "an", "in", "na"],
 
     // VERB
-    arbeitet: ["arbeitet", "arbeiten", "arbeite", "arbeitest"],
-    arbeiten: ["arbeitet", "arbeiten", "arbeite", "arbeitest"],
-    arbeite: ["arbeitet", "arbeiten", "arbeite", "arbeitest"],
-    arbeitest: ["arbeitet", "arbeiten", "arbeite", "arbeitest"],
+    arbeiten: ["arbeiten", "arbeite", "arbeitet", "arbeitest"],
+    arbeitet: ["arbeiten", "arbeite", "arbeitet", "arbeitest"],
+    arbeite: ["arbeiten", "arbeite", "arbeitet", "arbeitest"],
+    arbeitest: ["arbeiten", "arbeite", "arbeitet", "arbeitest"],
 
     // B
     brauchen: ["brauchen", "brauche", "braucht", "brauchst"],
