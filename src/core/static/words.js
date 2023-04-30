@@ -76,10 +76,10 @@ const options = {
     kreuzen: ["kreuzen", "kreuze", "kreuzt", "kreuzst"],
     // L
 
-    lernt: ["lernt", "lernen", "lernst", "lerne"],
-    lernen: ["lernt", "lernen", "lernst", "lerne"],
-    lernst: ["lernt", "lernen", "lernst", "lerne"],
-    lerne: ["lernt", "lernen", "lernst", "lerne"],
+    lernt: ["lernen", "lerne", "lernt", "lernst"],
+    lernen: ["lernen", "lerne", "lernt", "lernst"],
+    lernst: ["lernen", "lerne", "lernt", "lernst"],
+    lerne: ["lernen", "lerne", "lernt", "lernst"],
 
     // M
     machen: ["machen", "mache", "macht", "machst"],
