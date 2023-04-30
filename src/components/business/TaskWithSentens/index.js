@@ -152,20 +152,15 @@ const TaskWithSentens = (props) => {
     };
 
     const renderButtons = () => {
-        const classBtnRepit = classNames({
-            [styles.btnNext]: true,
-            [styles.repit]: true,
-        });
-
         return (
-            <>
-                <div className={classBtnRepit} onClick={onRepit}>
+            <div className={styles.btnContainer}>
+                <div className={styles.btn} onClick={onRepit}>
                     Repetieren
                 </div>
-                <div className={styles.btnNext} onClick={onNext}>
+                <div className={styles.btn} onClick={onNext}>
                     Nächste
                 </div>
-            </>
+            </div>
         );
     };
 
@@ -184,7 +179,7 @@ const TaskWithSentens = (props) => {
             buttons = renderButtons();
         } else {
             buttons = (
-                <div className={styles.btnNext} onClick={onNext}>
+                <div className={styles.btn} onClick={onNext}>
                     Noch einmal
                 </div>
             );
@@ -192,11 +187,13 @@ const TaskWithSentens = (props) => {
 
         return (
             <div className={styles.result}>
-                <div>
-                    {list}
-                    {props.sentensSort[counter].question ? "?" : null}
+                <div className={styles.results}>
+                    <div>
+                        {list}
+                        {props.sentensSort[counter].question ? "?" : null}
+                    </div>
+                    {renderCorectAnswer()}
                 </div>
-                {renderCorectAnswer()}
                 {buttons}
             </div>
         );

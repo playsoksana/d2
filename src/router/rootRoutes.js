@@ -8,7 +8,11 @@ import WordsPage from "views/words/index.js";
 
 export default (
     <Routes>
-        <Route exact={true} path="/d2" element={<HomePage />} />
-        <Route exact={true} path="/d2/:id" element={<WordsPage />} />
+        <Route exact={true} path="/" element={<HomePage />} />
+        <Route
+            exact={true}
+            path="/sentens-one-one/:id"
+            element={<WordsPage />}
+        />
     </Routes>
 );

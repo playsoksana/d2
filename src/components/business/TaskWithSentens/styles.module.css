@@ -32,7 +32,7 @@
 
     background-color: rgb(241, 246, 244);
     border-radius: 0.2rem;
-    border: 0.1rem solid rgb(123, 116, 116);
+    border: 1px solid #766f6f5e;
     margin: 0 auto;
 
     font-weight: 700;
@@ -63,13 +63,22 @@
     font-weight: 700;
 }
 
+.results {
+    margin: 30px;
+}
+
 .wrongWord {
     position: relative;
     color: red;
     text-decoration: line-through;
 }
 
-.btnNext {
+.btnContainer {
+    display: flex;
+}
+
+.btn {
+    min-width: 150px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
     background-color: #0a0a23;
@@ -78,8 +87,6 @@
 
     color: #fff;
     font-size: 1.4rem;
-}
 
-.repit {
-    background-color: rgb(66, 96, 66);
+    cursor: pointer;
 }
