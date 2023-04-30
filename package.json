@@ -2,7 +2,6 @@
     "name": "d2",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://playsoksana.github.io/d2",
     "dependencies": {
         "@babel/eslint-parser": "^7.21.3",
         "@redux-devtools/extension": "^3.2.5",

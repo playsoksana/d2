@@ -5,12 +5,12 @@ import Container from "components/containers";
 import { Link, useLocation } from "react-router-dom";
 
 const HomePage = () => {
-    const { pathname } = useLocation();
+    const location = useLocation();
 
     return (
         <div>
             <Container>
-                <Link to={`${pathname}/one`}>1</Link>
+                <Link to={`${location.pathname}/one`}>1</Link>
                 {/* <Link to={`${pathname}/one`}>2</Link>
                 <Link to={`${pathname}/one`}>3</Link> */}
             </Container>
