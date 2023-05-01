@@ -304,7 +304,7 @@ const sentens = [
         id: "59",
     },
     {
-        deutsch: "Er hört mir nicht",
+        deutsch: "Er hört mich nicht",
         UA: "Oн не слышит меня",
         id: "60",
     },
@@ -453,7 +453,7 @@ const sentens = [
     },
     {
         deutsch: "verbinden Sie es",
-        UA: "Соедини это",
+        UA: "Соедините это",
         id: "89",
     },
     {

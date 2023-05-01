@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import { useSpeechSynthesis } from "react-speech-kit";
 
 import { useSelector } from "react-redux";
+
+import useCounterSentens from "core/hooks/use-counter-word";
 
 import array from "core/lib/array";
 import classNames from "core/lib/class.js";
@@ -18,54 +20,49 @@ import options from "core/static/words.js";
 import styles from "./styles.module.css";
 
 const TaskWithSentens = (props) => {
-    const [counter, setCounter] = useState(0);
-    const [counterWord, setCounterWord] = useState(0);
-    const [answer, setAnswer] = useState([]);
-
+    const useCounter = useCounterSentens();
     const store = useSelector((state) => ({
-        lang: state.lang,
+        lang: state.lang.lang,
     }));
 
     const { speak, voices } = useSpeechSynthesis();
 
-    const sentensDeutsch = props.sentensSort[counter].deutsch;
+    const sentensDeutsch = props.sentensSort[useCounter.counterSentens].deutsch;
     const arrSentensDeutsch = sentensDeutsch.split(" ");
     const lengthSentens = arrSentensDeutsch.length;
-    const word = arrSentensDeutsch[counterWord];
+    const word = arrSentensDeutsch[useCounter.counterWord];
     let optArr = options[`${word}`];
-    const completed = Math.round((counter / props.sentensSort.length) * 100);
+    const completed = Math.round(
+        (useCounter.counterSentens / props.sentensSort.length) * 100
+    );
+
+    const isEqualArr = array.isEqual(arrSentensDeutsch, useCounter.answer);
 
     const onChoice = (wordChoiced) => {
-        setAnswer((pre) => [...pre, wordChoiced]);
-        setCounterWord((pre) => pre + 1);
+        useCounter.addWordForAnswer(wordChoiced);
     };
 
-    const onNext = () => {
-        const isEqualArr = array.isEqual(arrSentensDeutsch, answer);
+    useEffect(() => {
+        if (isEqualArr) {
+            speak({ text: sentensDeutsch, voice: voices[2] });
+        }
+    }, [useCounter.answer]);
 
+    const onNext = () => {
         if (!isEqualArr) {
-            setAnswer([]);
-            setCounterWord(0);
+            useCounter.repitSentens();
             return;
         }
 
-        setCounter((pre) => pre + 1);
-        setAnswer([]);
-        setCounterWord(0);
+        useCounter.stepToNextSentens(sentensDeutsch);
 
-        if (props.sentensSort.length - 1 === counter) {
-            setCounter(0);
-            setAnswer([]);
-            setCounterWord(0);
-            return;
+        if (props.sentensSort.length - 1 === useCounter.counterSentens) {
+            useCounter.startOver();
         }
     };
 
     const onDelete = () => {
-        setCounterWord((pre) => pre - 1);
-        setAnswer((pre) => {
-            return pre.slice(0, pre.length - 1);
-        });
+        useCounter.deleteWord();
     };
 
     const onRepit = () => {
@@ -74,24 +71,8 @@ const TaskWithSentens = (props) => {
 
     // === //
 
-    useEffect(() => {
-        if (optArr && optArr[0]) {
-            optArr = [...optArr].sort(() => Math.random() - 0.5);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (counterWord === lengthSentens) {
-            if (sentensDeutsch === answer.join(" ")) {
-                speak({ text: sentensDeutsch, voice: voices[2] });
-            }
-        }
-    }, [answer]);
-
-    // === //
-
     const renderOptionForChoice = () => {
-        if (counterWord === lengthSentens || !optArr) {
+        if (useCounter.counterWord === lengthSentens || !optArr) {
             return null;
         }
 
@@ -99,13 +80,18 @@ const TaskWithSentens = (props) => {
     };
 
     const renderResult = () => {
-        if (counterWord === lengthSentens || counterWord === 0) {
+        if (
+            useCounter.counterWord === lengthSentens ||
+            useCounter.counterWord === 0
+        ) {
             return;
         }
 
         return (
             <div className={styles.temperaryAnswer}>
-                <div className={styles.answer}>{answer.join(" ")}</div>
+                <div className={styles.answer}>
+                    {useCounter.answer.join(" ")}
+                </div>
                 <div onClick={onDelete} className={styles.iconSpace}>
                     <Backspace color={"rgb(141, 146, 144)"} />
                 </div>
@@ -115,18 +101,18 @@ const TaskWithSentens = (props) => {
 
     const answerChecked = (index) => {
         const classNameWord = classNames({
-            [styles.wrongWord]: answer[index] !== arrSentensDeutsch[index],
+            [styles.wrongWord]:
+                useCounter.answer[index] !== arrSentensDeutsch[index],
         });
 
         return (
             <span key={index} className={classNameWord}>
-                {` ${answer[index]}`}
+                {` ${useCounter.answer[index]}`}
             </span>
         );
     };
 
     const renderCorectAnswer = () => {
-        const isEqualArr = array.isEqual(arrSentensDeutsch, answer);
         if (isEqualArr) {
             return null;
         }
@@ -134,13 +120,14 @@ const TaskWithSentens = (props) => {
         return (
             <div>
                 {sentensDeutsch}
-                {props.sentensSort[counter].question ? "?" : null}
+                {props.sentensSort[useCounter.counterSentens].question
+                    ? "?"
+                    : null}
             </div>
         );
     };
 
     const renderButtons = () => {
-        const isEqualArr = array.isEqual(arrSentensDeutsch, answer);
         if (isEqualArr) {
             return (
                 <div className={styles.btnContainer}>
@@ -153,10 +140,10 @@ const TaskWithSentens = (props) => {
     };
 
     const renderAnswerWithNotification = () => {
-        if (counterWord !== lengthSentens) {
+        if (useCounter.counterWord !== lengthSentens) {
             return;
         }
-        const list = answer.map((word, index) => {
+        const list = useCounter.answer.map((word, index) => {
             return answerChecked(index);
         });
 
@@ -165,7 +152,9 @@ const TaskWithSentens = (props) => {
                 <div className={styles.results}>
                     <div>
                         {list}
-                        {props.sentensSort[counter].question ? "?" : null}
+                        {props.sentensSort[useCounter.counterSentens].question
+                            ? "?"
+                            : null}
                     </div>
                     {renderCorectAnswer()}
                 </div>
@@ -180,7 +169,10 @@ const TaskWithSentens = (props) => {
         <div>
             <Progress completed={completed} />
             <div className={styles.sentenceNative}>
-                {props.sentensSort[counter][store.lang?.lang || "UA"]}
+                {
+                    // eslint-disable-next-line prettier/prettier
+                    props.sentensSort[useCounter.counterSentens][store.lang || "UA"]
+                }
             </div>
             {renderOptionForChoice()}
             {renderResult()}
