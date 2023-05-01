@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import BtnLinkClass from "components/simple/Progress/btn-link-class";
+import BtnLinkClass from "components/simple/btn-link-class/index.js";
 import Container from "components/containers";
 
 import styles from "./styles.module.css";

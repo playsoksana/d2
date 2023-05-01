@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "./styles.module.css";
+
 const Progress = (props) => {
     const containerStyles = {
         height: 30,
@@ -26,9 +28,11 @@ const Progress = (props) => {
     };
 
     return (
-        <div style={containerStyles}>
-            <div style={fillerStyles}>
-                <span style={labelStyles}>{`${props.completed}%`}</span>
+        <div className={styles.progressWrap}>
+            <div style={containerStyles}>
+                <div style={fillerStyles}>
+                    <span style={labelStyles}>{`${props.completed}%`}</span>
+                </div>
             </div>
         </div>
     );

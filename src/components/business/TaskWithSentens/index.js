@@ -9,6 +9,8 @@ import classNames from "core/lib/class.js";
 
 import Backspace from "icons/backspace";
 
+import BtnControl from "components/simple/btn-control";
+import BtnWordBlock from "components/simple/btn-word-block";
 import Progress from "components/simple/Progress";
 
 import options from "core/static/words.js";
@@ -93,21 +95,7 @@ const TaskWithSentens = (props) => {
             return null;
         }
 
-        const list = optArr.map((word, i) => {
-            return (
-                <div
-                    key={i}
-                    className={styles.btnWord}
-                    onClick={() => {
-                        onChoice(word);
-                    }}
-                >
-                    {word}
-                </div>
-            );
-        });
-
-        return <div className={styles.btnWrap}>{list}</div>;
+        return <BtnWordBlock optArr={optArr} onChoice={onChoice} />;
     };
 
     const renderResult = () => {
@@ -118,7 +106,7 @@ const TaskWithSentens = (props) => {
         return (
             <div className={styles.temperaryAnswer}>
                 <div className={styles.answer}>{answer.join(" ")}</div>
-                <div onClick={onDelete}>
+                <div onClick={onDelete} className={styles.iconSpace}>
                     <Backspace color={"rgb(141, 146, 144)"} />
                 </div>
             </div>
@@ -152,16 +140,16 @@ const TaskWithSentens = (props) => {
     };
 
     const renderButtons = () => {
-        return (
-            <div className={styles.btnContainer}>
-                <div className={styles.btn} onClick={onRepit}>
-                    Repetieren
+        const isEqualArr = array.isEqual(arrSentensDeutsch, answer);
+        if (isEqualArr) {
+            return (
+                <div className={styles.btnContainer}>
+                    <BtnControl onRepit={onRepit}>Repetieren</BtnControl>
+                    <BtnControl onNext={onNext}>Nächste</BtnControl>
                 </div>
-                <div className={styles.btn} onClick={onNext}>
-                    Nächste
-                </div>
-            </div>
-        );
+            );
+        }
+        return <BtnControl onNext={onNext}>Noch einmal</BtnControl>;
     };
 
     const renderAnswerWithNotification = () => {
@@ -172,19 +160,6 @@ const TaskWithSentens = (props) => {
             return answerChecked(index);
         });
 
-        let buttons = null;
-
-        const isEqualArr = array.isEqual(arrSentensDeutsch, answer);
-        if (isEqualArr) {
-            buttons = renderButtons();
-        } else {
-            buttons = (
-                <div className={styles.btn} onClick={onNext}>
-                    Noch einmal
-                </div>
-            );
-        }
-
         return (
             <div className={styles.result}>
                 <div className={styles.results}>
@@ -194,7 +169,7 @@ const TaskWithSentens = (props) => {
                     </div>
                     {renderCorectAnswer()}
                 </div>
-                {buttons}
+                {renderButtons()}
             </div>
         );
     };
@@ -203,9 +178,7 @@ const TaskWithSentens = (props) => {
 
     return (
         <div>
-            <div className={styles.progressWrap}>
-                <Progress completed={completed} />
-            </div>
+            <Progress completed={completed} />
             <div className={styles.sentenceNative}>
                 {props.sentensSort[counter][store.lang?.lang || "UA"]}
             </div>
