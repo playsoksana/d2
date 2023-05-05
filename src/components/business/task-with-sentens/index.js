@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 
 import { useSpeechSynthesis } from "react-speech-kit";
 
@@ -36,9 +36,9 @@ const TaskWithSentens = (props) => {
     const lengthSentens = arrSentensDeutsch.length;
     let optArr = options[`${arrSentensDeutsch[useCounter.counterWord]}`];
 
-    const getCompleted = () => Math.round(
+    const completed = useMemo(() => Math.round(
         (useCounter.counterSentens / props.sentensSort.length) * 100
-    );
+    ), [useCounter.counterSentens, props.sentensSort.length])
 
     const isEqualArr = array.isEqual(arrSentensDeutsch, useCounter.answer);
 
@@ -94,7 +94,6 @@ const TaskWithSentens = (props) => {
                 </div>
 
             );
-
         }
 
         return (
@@ -116,7 +115,7 @@ const TaskWithSentens = (props) => {
 
     return (
         <div>
-            <Progress completed={getCompleted()} />
+            <Progress completed={completed} />
             <div className={styles.sentenceNative}>
                 {props.sentensSort[useCounter.counterSentens][store.lang || "UA"]
                 }
