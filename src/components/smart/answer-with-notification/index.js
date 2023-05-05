@@ -10,7 +10,7 @@ const AnswerWithNotification = (props) => {
     const answer = props.useCounter.answer;
 
     const answerChecked = (index) => {
-        const arrQuestion = props.sentence.deutsch.split(" ")[index];
+        const arrQuestion = props.sentence.split(" ")[index];
 
         const classNameWord = classNames({
             [styles.wrongWord]: answer[index] !== arrQuestion
@@ -34,10 +34,8 @@ const AnswerWithNotification = (props) => {
 
         return (
             <div>
-                {props.sentence.deutsch}
-                {props.sentence.question
-                    ? "?"
-                    : null}
+                {props.sentence}
+                {props.sumbol}
             </div>
         );
     };
@@ -59,9 +57,7 @@ const AnswerWithNotification = (props) => {
             <div className={styles.results}>
                 <div>
                     {list}
-                    {props.sentence.question
-                        ? "?"
-                        : null}
+                    {props.sumbol}
                 </div>
                 {renderCorectAnswer()}
             </div>
@@ -74,6 +70,7 @@ AnswerWithNotification.defaultProps = {
     isEqualArr: false,
     sentence: [],
     useCounter: {},
+    sumbol: "",
     onRepit: () => { },
     onNext: () => { },
 };

@@ -29,12 +29,13 @@ const TaskWithSentens = (props) => {
     const { speak, voices } = useSpeechSynthesis();
 
     const sentence = props.sentensSort[useCounter.counterSentens];
-    const sentensDeutsch = sentence.deutsch;
+    const sentensDeutsch = sentence.deutsch.replace(/[?!]*/g, "");
+    const sumbol = sentence.deutsch[sentence.deutsch.length - 1].replace(/[a-zA-Z ]*/g, "");
+
     const arrSentensDeutsch = sentensDeutsch.split(" ");
     const lengthSentens = arrSentensDeutsch.length;
     let optArr = options[`${arrSentensDeutsch[useCounter.counterWord]}`];
 
-    // TODO: helper
     const getCompleted = () => Math.round(
         (useCounter.counterSentens / props.sentensSort.length) * 100
     );
@@ -77,17 +78,18 @@ const TaskWithSentens = (props) => {
     // === //
 
     const renderContent = () => {
-        console.log(useCounter.counterWord, lengthSentens);
         if (useCounter.counterWord === lengthSentens) {
             return (
                 <div>
 
                     <AnswerWithNotification
                         isEqualArr={isEqualArr}
-                        sentence={sentence}
+                        sentence={sentensDeutsch}
+                        sumbol={sumbol}
                         useCounter={useCounter}
                         onRepit={onRepit}
                         onNext={onNext}
+
                     />
                 </div>
 
@@ -108,7 +110,7 @@ const TaskWithSentens = (props) => {
                 </div>
             </div>
         );
-    }
+    };
 
     // === //
 
