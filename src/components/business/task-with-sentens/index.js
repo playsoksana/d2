@@ -8,12 +8,11 @@ import useCounterSentens from "core/hooks/use-counter-word";
 
 import array from "core/lib/array";
 
-import Backspace from "icons/backspace";
-
 import AnswerWithNotification from "components/smart/answer-with-notification/index.js";
 
 import BtnWordBlock from "components/simple/btn-word-block";
 import Progress from "components/simple/Progress";
+import TemporaryAnswer from "components/simple/temporary-answer";
 
 import options from "core/static/words.js";
 
@@ -76,6 +75,21 @@ const TaskWithSentens = (props) => {
     }, [useCounter.answer]);
 
     // === //
+    // const renderTemperaryAnswer = () => {
+    //     if (useCounter.answer.length === 0) {
+    //         return null;
+    //     }
+    //     return (
+    //         <div className={styles.temperaryAnswer}>
+    //             <div className={styles.answer}>
+    //                 {useCounter.answer.join(" ")}
+    //             </div>
+    //             <div onClick={onDelete} className={styles.iconSpace}>
+    //                 <Backspace color={"rgb(141, 146, 144)"} />
+    //             </div>
+    //         </div>
+    //     );
+    // }
 
     const renderContent = () => {
         if (useCounter.counterWord === lengthSentens) {
@@ -99,14 +113,7 @@ const TaskWithSentens = (props) => {
         return (
             <div>
                 <BtnWordBlock optArr={optArr} onChoice={onChoice} />
-                <div className={styles.temperaryAnswer}>
-                    <div className={styles.answer}>
-                        {useCounter.answer.join(" ")}
-                    </div>
-                    <div onClick={onDelete} className={styles.iconSpace}>
-                        <Backspace color={"rgb(141, 146, 144)"} />
-                    </div>
-                </div>
+                <TemporaryAnswer answer={useCounter.answer} onDelete={onDelete} />
             </div>
         );
     };

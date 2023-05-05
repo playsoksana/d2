@@ -11,17 +11,3 @@
 
     box-sizing: border-box;
 }
-
-.temperaryAnswer {
-    margin: 2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.answer {
-    margin: 1rem;
-
-    font-size: 1.4rem;
-    font-weight: 700;
-}
