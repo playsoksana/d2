@@ -8,6 +8,7 @@ import Container from "components/containers";
 import TaskWithSentens from "components/business/task-with-sentens/index.js";
 
 import one from "core/static/one/sentence.js";
+import second from "core/static/second/sentence.js";
 
 const WordsPage = () => {
     const { pathname } = useLocation();
@@ -16,6 +17,9 @@ const WordsPage = () => {
     switch (path) {
         case "one":
             data = one;
+            break;
+        case "second":
+            data = second;
             break;
 
         default:

@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-const sentens = [
+const sentence = [
     {
         deutsch: "Ich weiss es nicht",
         UA: "Я не знаю этого",
@@ -558,4 +558,4 @@ const sentens = [
     },
 ];
 
-export default sentens;
+export default sentence;
