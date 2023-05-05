@@ -6,7 +6,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:prettier/recommended",
+        // "plugin:prettier/recommended",
         "prettier"
     ],
     "overrides": [],
@@ -21,8 +21,9 @@
         "no-duplicate-imports": "error",
         "quotes": ["error", "double"],
         "indent": ["warn", 4, { "SwitchCase": 1 }],
+
         "no-multiple-empty-lines": [2, { "max": 2 }],
-        "arrow-body-style": [0, "never"],
+        "arrow-body-style": [0, "always"],
         "import/no-unresolved": [0],
         "react/prop-types": 0,
         "react/sort-comp": 0,

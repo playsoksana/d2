@@ -25,28 +25,3 @@
     font-size: 1.4rem;
     font-weight: 700;
 }
-
-.result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-}
-
-.results {
-    margin: 30px;
-}
-
-.wrongWord {
-    position: relative;
-    color: red;
-    text-decoration: line-through;
-}
-
-.btnContainer {
-    display: flex;
-}

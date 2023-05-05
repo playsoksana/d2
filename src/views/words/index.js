@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import array from "core/lib/array";
 
 import Container from "components/containers";
-import TaskWithSentens from "components/business/TaskWithSentens/index.js";
+import TaskWithSentens from "components/business/task-with-sentens/index.js";
 
 import one from "core/static/one/sentens.js";
 

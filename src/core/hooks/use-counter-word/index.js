@@ -5,6 +5,8 @@ const useCounterSentens = () => {
     const [counterWord, setCounterWord] = useState(0);
     const [answer, setAnswer] = useState([]);
 
+    // TODO: make one useState
+
     const repitSentens = () => {
         setAnswer([]);
         setCounterWord(0);

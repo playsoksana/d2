@@ -1,6 +1,6 @@
 import React from "react";
 
-import SwicherLang from "components/base/SwicherLang";
+import SwicherLang from "components/base/swicher-lang";
 
 // import styles from "./styles.module.css";
 

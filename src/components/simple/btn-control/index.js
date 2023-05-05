@@ -17,10 +17,8 @@ const BtnControl = (props) => {
 };
 
 BtnControl.defaultProps = {
-    // eslint-disable-next-line prettier/prettier
-    onRepit: () => {},
-    // eslint-disable-next-line prettier/prettier
-    onNext: () => {},
+    onRepit: () => { },
+    onNext: () => { },
     children: "",
 };
 
