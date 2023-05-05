@@ -7,7 +7,7 @@ import array from "core/lib/array";
 import Container from "components/containers";
 import TaskWithSentens from "components/business/task-with-sentens/index.js";
 
-import one from "core/static/one/sentens.js";
+import one from "core/static/one/sentence.js";
 
 const WordsPage = () => {
     const { pathname } = useLocation();
