@@ -74,23 +74,6 @@ const TaskWithSentens = (props) => {
         }
     }, [useCounter.answer]);
 
-    // === //
-    // const renderTemperaryAnswer = () => {
-    //     if (useCounter.answer.length === 0) {
-    //         return null;
-    //     }
-    //     return (
-    //         <div className={styles.temperaryAnswer}>
-    //             <div className={styles.answer}>
-    //                 {useCounter.answer.join(" ")}
-    //             </div>
-    //             <div onClick={onDelete} className={styles.iconSpace}>
-    //                 <Backspace color={"rgb(141, 146, 144)"} />
-    //             </div>
-    //         </div>
-    //     );
-    // }
-
     const renderContent = () => {
         if (useCounter.counterWord === lengthSentens) {
             return (
@@ -106,7 +89,6 @@ const TaskWithSentens = (props) => {
 
                     />
                 </div>
-
             );
         }
 
