@@ -1,4 +1,5 @@
 const options = {
+    Das: ["Das", "Der", "Die"],
     das: ["das", "der", "die"],
     der: ["das", "der", "die"],
     die: ["das", "der", "die"],
@@ -18,6 +19,7 @@ const options = {
     sie: ["er", "sie", "Sie", "es"],
     es: ["ich", "sie", "er", "es"],
     nicht: ["nicht", "nein", "nein", "noch"],
+    keine: ["nicht", "keine", "nein", "nein"],
     mir: ["mir", "uns", "mich", "ich"],
     mich: ["mir", "uns", "mich", "ich"],
     uns: ["mir", "uns", "mich", "ich"],
@@ -27,7 +29,9 @@ const options = {
     ihn: ["ihnen", "uns", "dich", "inh"],
 
     // pred
-    an: ["on", "an", "in", "na"],
+    an: ["im", "an", "in", "na"],
+    im: ["im", "an", "in", "na"],
+    in: ["im", "an", "in", "na"],
 
     // VERB
     arbeiten: ["arbeiten", "arbeite", "arbeitet", "arbeitest"],
@@ -76,6 +80,11 @@ const options = {
     kreuzen: ["kreuzen", "kreuze", "kreuzt", "kreuzst"],
     // L
 
+    leben: ["leben", "lebe", "lebt", "lebst"],
+    lebe: ["leben", "lebe", "lebt", "lebst"],
+    lebt: ["leben", "lebe", "lebt", "lebst"],
+    lebst: ["leben", "lebe", "lebt", "lebst"],
+
     lernt: ["lernen", "lerne", "lernt", "lernst"],
     lernen: ["lernen", "lerne", "lernt", "lernst"],
     lernst: ["lernen", "lerne", "lernt", "lernst"],
@@ -88,6 +97,7 @@ const options = {
     machst: ["machen", "mache", "macht", "machst"],
 
     meinen: ["meinen", "meine", "meint", "meinst"],
+    mein: ["meinen", "meine", "mein", "meinst"],
     meine: ["meinen", "meine", "meint", "meinst"],
     meint: ["meinen", "meine", "meint", "meinst"],
     meinst: ["meinen", "meine", "meint", "meinst"],
@@ -169,18 +179,49 @@ const options = {
     "jeden Tag": ["heute", "jetzt", "jeden Tag", "stets"],
     stets: ["heute", "jetzt", "gestern", "bald"],
     nach: ["nach", "jetzt", "gestern", "immer"],
+    aus: ["nach", "aus", "gestern", "immer"],
     immer: ["nach", "jetzt", "gestern", "immer"],
 
     // Noun
     Arbeit: ["Arbeit", "Arbeiten", "Arbeite", "Arbeist"],
+    Bruder: ["Bruder", "Schwester", "Geschwister", "Eltern"],
     Buch: ["Buch", "Bild", "Box", "Ball"],
     Geld: ["Geld", "Gelb", "Gelt", "Gelf"],
+    Geschwister: ["Vater", "Mutter", "Geschwister", "Eltern"],
+    Grosseltern: ["Grossvater", "Grossmutter", "Grosseltern", "Eltern"],
+    Grossvater: ["Grossvater", "Grossmutter", "Grosseltern", "Eltern"],
+    Grossmutter: ["Grossvater", "Grossmutter", "Grosseltern", "Eltern"],
     Familie: ["Familie", "Fimilie", "Femilie", "Famili"],
     Frage: ["Frage", "Problem", "Idee", "Lösung"],
-    Problem: ["Frage", "Problem", "Idee", "Lösung"],
+    Frau: ["Mann", "Männer", "Frau", "Frauen"],
+    Frauen: ["Mann", "Männer", "Frau", "Frauen"],
+    Eltern: ["Vater", "Mutter", "Geschwister", "Eltern"],
+    Enkel: ["Enkel", "Enkelin", "Enkelinnen", "Eltern"],
+    Enkelin: ["Enkel", "Enkelin", "Enkelinnen", "Eltern"],
+    Enkelinnen: ["Enkel", "Enkelin", "Enkelinnen", "Eltern"],
     Idee: ["Frage", "Problem", "Idee", "Lösung"],
     Ideen: ["Frage", "Problem", "Ideen", "Lösung"],
+    Kind: ["Tochter", "Sohn", "Kinder", "Kind"],
+    Kinder: ["Tochter", "Sohn", "Kinder", "Kind"],
+    Lehrer: ["Lehrer", "Lehrerin", "Lehrerinen", "Lehrerinnen"],
+    Lehrerin: ["Lehrer", "Lehrerin", "Lehrerinen", "Lehrerinnen"],
+    Lehrerinen: ["Lehrer", "Lehrerin", "Lehrerinen", "Lehrerinnen"],
+    Lehrerinnen: ["Lehrer", "Lehrerin", "Lehrerinen", "Lehrerinnen"],
     Lösung: ["Frage", "Problem", "Idee", "Lösung"],
+    Mann: ["Mann", "Männer", "Frau", "Frauen"],
+    Männer: ["Mann", "Männer", "Frau", "Frauen"],
+    Mutter: ["Vater", "Mutter", "Geschwister", "Eltern"],
+    Tochter: ["Tochter", "Sohn", "Söhne", "Kind"],
+    Oma: ["Oma", "Opa", "Grosseltern", "Eltern"],
+    Opa: ["Oma", "Opa", "Grosseltern", "Eltern"],
+    Park: ["Pause", "Problem", "Park", "Lösung"],
+
+    Pause: ["Pause", "Problem", "Park", "Lösung"],
+    Problem: ["Frage", "Problem", "Idee", "Lösung"],
+    Schwester: ["Bruder", "Schwester", "Geschwister", "Eltern"],
+    Sohn: ["Tochter", "Sohn", "Söhne", "Kind"],
+    Söhne: ["Tochter", "Sohn", "Söhne", "Kind"],
+    Vater: ["Vater", "Mutter", "Geschwister", "Eltern"],
     Wort: ["Word", "Wort", "Wörter", "Buch"],
     Wörter: ["Word", "Wort", "Wörter", "Buch"],
 
@@ -210,10 +251,20 @@ const options = {
     sehr: ["viel", "sehr", "gross", "so"],
 
     // NUMER
+    zwei: ["ein", "zwei", "drei", "vier"],
+    drei: ["ein", "zwei", "drei", "vier"],
+    vier: ["ein", "zwei", "drei", "vier"],
     zehn: ["zehn", "zwanzig", "dreissig", "vierzig"],
+    elf: ["zehn", "elf", "dreissig", "vierzig"],
     zwanzig: ["zehn", "zwanzig", "dreissig", "vierzig"],
     dreissig: ["zehn", "zwanzig", "dreissig", "vierzig"],
     vierzig: ["zehn", "zwanzig", "dreissig", "vierzig"],
+
+    //time
+    alt: ["alt", "Jahr", "Jahre", "Zeit"],
+    Jahr: ["alt", "Jahr", "Jahre", "Zeit"],
+    Jahre: ["alt", "Jahr", "Jahre", "Zeit"],
+
 
     //Geld
 
@@ -233,6 +284,11 @@ const options = {
     Nachbarn: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
     Verwandte: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
     Leute: ["Vertraut", "Nachbarn", "Verwandte", "Leute"],
+
+    Schweiz: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
+    Ukraine: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
+    Deutschland: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
+    Armenien: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
 
     // SPORT
     Fussball: ["Fussball", "Eishockey", "Karten", "Klavier"],
@@ -273,7 +329,8 @@ const options = {
     Wie: ["Woher", "Wo", "Wer", "Wie"],
 
     // Name
-    Tor: ["Top", "Tor", "Mor", "Gor"],
+    Tor: ["Tors", "Tor", "Mor", "Gor"],
+    Tors: ["Tors", "Tor", "Mor", "Gor"],
 
     // bitte
     bitte: ["bitte", "danke", "wenig", "sehr"],
