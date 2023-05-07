@@ -1,0 +1,88 @@
+.labels {
+    display: flex;
+    padding: 20px 5px;
+    justify-content: space-between;
+}
+
+.labelContainer {
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    background: white;
+    padding: 0 4px;
+}
+
+.input {
+    padding: 0 5px;
+    vertical-align: middle;
+    border-radius: 2px;
+    width: 130px;
+    min-height: 36px;
+    background-color: #ffffff;
+    border: 1px solid rgba(36, 28, 21, 0.3);
+    transition: all 0.2s ease-in-out 0s;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.inputResult {
+    padding: 2px 60px 2px 10px;
+    vertical-align: middle;
+    border-radius: 2px;
+    width: 100%;
+    min-height: 36px;
+    background-color: #ffffff;
+    border: 1px solid rgba(36, 28, 21, 0.3);
+    transition: all 0.2s ease-in-out 0s;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+    box-sizing: border-box;
+}
+
+.input:focus:focus,
+.inputResult:focus {
+    outline: none;
+    border: 1px solid #007c89;
+    box-shadow: inset 0 0 0 1px #007c89;
+}
+
+.randomValue {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text {
+    max-width: 100%;
+    padding: 2px 5px;
+    font-size: 20px;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.resultContainer {
+    height: 80px;
+    display: flex;
+    justify-items: center;
+}
+
+.btnEnter {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 40px;
+    background-color: rgba(128, 128, 128, 0.433);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+}

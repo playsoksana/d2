@@ -77,18 +77,14 @@ const TaskWithSentens = (props) => {
     const renderContent = () => {
         if (useCounter.counterWord === lengthSentens) {
             return (
-                <div>
-
-                    <AnswerWithNotification
-                        isEqualArr={isEqualArr}
-                        sentence={sentensDeutsch}
-                        sumbol={sumbol}
-                        useCounter={useCounter}
-                        onRepit={onRepit}
-                        onNext={onNext}
-
-                    />
-                </div>
+                <AnswerWithNotification
+                    isEqualArr={isEqualArr}
+                    sentence={sentensDeutsch}
+                    sumbol={sumbol}
+                    useCounter={useCounter}
+                    onRepit={onRepit}
+                    onNext={onNext}
+                />
             );
         }
 

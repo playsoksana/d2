@@ -17,6 +17,9 @@ const HomePage = () => {
                 <Link to="/sentens-one-one/second" className={styles.link}>
                     <BtnLinkClass content="Lektion 2" />
                 </Link>
+                <Link to="/numbers" className={styles.link}>
+                    <BtnLinkClass content="Numbers" />
+                </Link>
             </Container>
         </div>
     );
