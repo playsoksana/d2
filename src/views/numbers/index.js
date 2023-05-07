@@ -40,11 +40,11 @@ const NumberPage = () => {
     }
 
     const onChangeInputResult = (evt) => {
-        setValue(evt.target.value);
+        setValue((evt.target.value).trim());
     }
 
     const onChange = () => {
-        const isCorrect = getNumbers(randomValue) === value;
+        const isCorrect = getNumbers(randomValue) === value.toLowerCase();
         setCorrectResult(isCorrect);
         if (isCorrect) {
             speak({ text: value, voice: voices[2] });
