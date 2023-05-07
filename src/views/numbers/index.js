@@ -17,7 +17,7 @@ import styles from "./styles.module.css";
 
 const NumberPage = () => {
     const [num, setNum] = useState({ min: 0, max: 20 });
-    const [value, setValue] = useState("");
+    const [value, setValue] = useState(null);
     const [randomValue, setRandomValue] = useState(0);
     const [isCorrectResult, setCorrectResult] = useState(false);
     const [visible, setVisible] = useState(false);
@@ -25,10 +25,11 @@ const NumberPage = () => {
     const { speak, voices } = useSpeechSynthesis();
 
     const onChangeNumber = () => {
+        setValue(null);
         setRandomValue(Math.floor(Math.random() * (num.max - num.min + 1) + num.min));
         setCorrectResult(false);
         setVisible(false);
-        setValue("")
+        document.getElementById("form-result").reset();
     }
 
     const onChangeInput = (evt) => {
@@ -47,6 +48,7 @@ const NumberPage = () => {
         setCorrectResult(isCorrect);
         if (isCorrect) {
             speak({ text: value, voice: voices[2] });
+
         }
         setVisible(true);
     }
@@ -54,6 +56,10 @@ const NumberPage = () => {
     useEffect(() => {
         setRandomValue(Math.floor(Math.random() * (num.max - num.min + 1) + num.min))
     }, []);
+
+    useEffect(() => {
+
+    })
 
     return (
         <div>
@@ -72,17 +78,14 @@ const NumberPage = () => {
                         </div>
                     </div>
                     <div className={styles.randomValue}>{randomValue}</div>
-                    <div className={styles.labelContainer}>
+                    <form className={styles.labelContainer} id="form-result">
                         <label className={styles.label}>ergebnis</label>
                         <div className={styles.btnEnter} onClick={onChange}><ArrowRight color={"#555"} /></div>
                         <input className={styles.inputResult} value={num.value} onChange={onChangeInputResult} name="value" type="text" />
-                    </div>
+                    </form>
                     <div className={styles.resultContainer}>
                         {visible && <div className={styles.text}>{getNumbers(randomValue)}</div>}
                     </div>
-
-                    {/* RESULT */}
-
                     {isCorrectResult && <BtnControl onNext={onChangeNumber}>Nächste</BtnControl>}
                 </div>
             </Container>
