@@ -130,6 +130,111 @@ const sentence = [
         UA: "Многие мужчины и женщины приезжают в Швейцарию из Украины",
         id: "26",
     },
+    {
+        deutsch: "Ich bin in der Ukraine geboren",
+        UA: "Я родился в Украине",
+        id: "27",
+    },
+    {
+        deutsch: "aber Ich lebe in Olten",
+        UA: "но я живу в Ольтене",
+        id: "28",
+    },
+    {
+        deutsch: "mein Freund Name Tor",
+        UA: "Моего друга зовут Тор",
+        id: "29",
+    },
+    {
+        deutsch: "Wir wohnen schon lange zusammen",
+        UA: "Мы давно живем вместе",
+        id: "30",
+    },
+    {
+        deutsch: "Er ist geschieden schon lange",
+        UA: "Он давно в разводе",
+        id: "31",
+    },
+    {
+        deutsch: "tut mich leid Ich weisse nicht",
+        UA: "извините, я не знаю",
+        id: "32",
+    },
+    {
+        deutsch: "Wie alt sind Sie?",
+        UA: "Сколько вам лет?",
+        id: "33",
+    },
+    {
+        deutsch: "Wie alt bist du?",
+        UA: "Сколько тебе лет?",
+        id: "34",
+    },
+    {
+        deutsch: "Wie alt seid Ihr?",
+        UA: "Сколько вам лет? -Plural",
+        id: "35",
+    },
+    {
+        deutsch: "Woher kommt Ihr?",
+        UA: "Откуда вы? -Plural",
+        id: "36",
+    },
+    {
+        deutsch: "Wie heisst Ihr?",
+        UA: "Как вас зовут? -Plural",
+        id: "37",
+    },
+    {
+        deutsch: "meine Schwester ist ledig",
+        UA: "моя сестра не замужем",
+        id: "38",
+    },
+    {
+        deutsch: "Wo lebt sie?",
+        UA: "Где она живет?",
+        id: "39",
+    },
+    {
+        deutsch: "Wo wohnt er jetzt?",
+        UA: "Где он живет сейчас?",
+        id: "40",
+    },
+    {
+        deutsch: "hast du Kinder?",
+        UA: "У тебя есть дети?",
+        id: "41",
+    },
+    {
+        deutsch: "sind Sie geschieden?",
+        UA: "Вы разведены?",
+        id: "42",
+    },
+    {
+        deutsch: "hat er Zeit?",
+        UA: "У него есть время?",
+        id: "43",
+    },
+    {
+        deutsch: "Wer seid ihr?",
+        UA: "Кто ты?  -Plural",
+        id: "44",
+    },
+    {
+        deutsch: "und du?",
+        UA: "A ты?",
+        id: "45",
+    },
+    {
+        deutsch: "Wie bitte?",
+        UA: "Что простите?",
+        id: "46",
+    },
+    {
+        deutsch: "Ich spreche nur Englisch und ein bisschen Deutsch",
+        UA: "Я говорю только по-английски и немного по-немецки",
+        id: "47",
+    },
 ];
 
 export default sentence;

@@ -118,6 +118,7 @@ const options = {
 
     sprechen: ["sprechen", "spreche", "spricht", "sprichst"],
     spricht: ["sprechen", "spreche", "spricht", "sprichst"],
+    sprecht: ["sprechen", "spreche", "spricht", "sprecht"],
     spreche: ["sprechen", "spreche", "spricht", "sprichst"],
     sprichst: ["sprechen", "spreche", "spricht", "sprichst"],
 
@@ -160,14 +161,24 @@ const options = {
     vergleiche: ["vergleichen", "vergleiche", "vergleicht", "vergleichst"],
     vergleicht: ["vergleichen", "vergleiche", "vergleicht", "vergleichst"],
     vergleichst: ["vergleichen", "vergleiche", "vergleicht", "vergleichst"],
+    // W
 
-    wissen: ["wissen", "weiss", "weisst"],
+    weissen: ["wissen", "weisse", "weisst"],
+    weisse: ["wissen", "weisse", "weisst"],
     weiss: ["wissen", "weiss", "weisst"],
 
     wiederholen: ["wiederholen", "wiederhole", "wiederholt", "wiederholst"],
     wiederhole: ["wiederholen", "wiederhole", "wiederholt", "wiederholst"],
     wiederholt: ["wiederholen", "wiederhole", "wiederholt", "wiederholst"],
     wiederholst: ["wiederholen", "wiederhole", "wiederholt", "wiederholst"],
+
+
+    wohnen: ["wohnen", "wohne", "wohnt", "wohnst"],
+    wohne: ["wohnen", "wohne", "wohnt", "wohnst"],
+    wohnt: ["wohnen", "wohne", "wohnt", "wohnst"],
+    wohnst: ["wohnen", "wohne", "wohnt", "wohnst"],
+
+    // Z
 
     zeigen: ["zeigen", "zeige", "zeigt", "zeigst"],
     zeige: ["zeigen", "zeige", "zeigt", "zeigst"],
@@ -194,6 +205,10 @@ const options = {
     Familie: ["Familie", "Fimilie", "Femilie", "Famili"],
     Frage: ["Frage", "Problem", "Idee", "Lösung"],
     Frau: ["Mann", "Männer", "Frau", "Frauen"],
+    Freund: ["Freund", "Freunde", "Feind", "Feinde"],
+    Freunde: ["Freund", "Freunde", "Feind", "Feinde"],
+    Feind: ["Freund", "Freunde", "Feind", "Feinde"],
+    Feinde: ["Freund", "Freunde", "Feind", "Feinde"],
     Frauen: ["Mann", "Männer", "Frau", "Frauen"],
     Eltern: ["Vater", "Mutter", "Geschwister", "Eltern"],
     Enkel: ["Enkel", "Enkelin", "Enkelinnen", "Eltern"],
@@ -211,6 +226,7 @@ const options = {
     Mann: ["Mann", "Männer", "Frau", "Frauen"],
     Männer: ["Mann", "Männer", "Frau", "Frauen"],
     Mutter: ["Vater", "Mutter", "Geschwister", "Eltern"],
+    Name: ["Nachname", "Name", "Familienname"],
     Tochter: ["Tochter", "Sohn", "Söhne", "Kind"],
     Oma: ["Oma", "Opa", "Grosseltern", "Eltern"],
     Opa: ["Oma", "Opa", "Grosseltern", "Eltern"],
@@ -247,8 +263,11 @@ const options = {
     klein: ["viel", "wenig", "gross", "klein"],
     grosse: ["grosse", "kleine", "lange", "hoche"],
     kleine: ["grosse", "kleine", "lange", "hoche"],
+    lange: ["grosse", "kleine", "lange", "hoche"],
     so: ["viel", "sehr", "gross", "so"],
     sehr: ["viel", "sehr", "gross", "so"],
+    tut: ["leid", "tut", "mich", "nur"],
+    leid: ["leid", "tut", "mich", "nur"],
 
     // NUMER
     zwei: ["ein", "zwei", "drei", "vier"],
@@ -264,6 +283,7 @@ const options = {
     alt: ["alt", "Jahr", "Jahre", "Zeit"],
     Jahr: ["alt", "Jahr", "Jahre", "Zeit"],
     Jahre: ["alt", "Jahr", "Jahre", "Zeit"],
+    Zeit: ["alt", "Jahr", "Jahre", "Zeit"],
 
 
     //Geld
@@ -289,6 +309,7 @@ const options = {
     Ukraine: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
     Deutschland: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
     Armenien: ["Schweiz", "Ukraine", "Deutschland", "Armenien"],
+    Olten: ["Olten", "Bern", "Zürich", "Solothurn"],
 
     // SPORT
     Fussball: ["Fussball", "Eishockey", "Karten", "Klavier"],
@@ -300,12 +321,14 @@ const options = {
     interessant: ["wirklich", "vielleicht", "stets", "interessant"],
     interessante: ["wirklich", "vielleicht", "interessant", "interessante"],
     alles: ["wirklich", "vielleicht", "alles", "interessant"],
+    zusammen: ["separat", "zusammen", "abwechselnd", "allein"],
 
     // Adverb
     gut: ["gut", "schlecht", "gutes", "interessant"],
     gutes: ["gut", "schlecht", "gutes", "interessant"],
 
     schön: ["schön", "schon", "schoon", "schöne"],
+    schon: ["schön", "schon", "schoon", "schöne"],
 
     einen: ["ein", "einen", "eine", "----"],
     ein: ["ein", "einen", "eine", "----"],
@@ -340,6 +363,11 @@ const options = {
     müssen: ["muss", "müssen", "must", "---"],
     kann: ["kann", "können", "kannst", "---"],
     können: ["kann", "können", "kannst", "---"],
+
+    // gerundi
+    geboren: ["geboren", "erstellt", "implementiert", "geschieden"],
+    geschieden: ["geboren", "ledig", "implementiert", "geschieden"],
+    ledig: ["geboren", "ledig", "implementiert", "geschieden"],
 };
 
 export default options;
